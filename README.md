@@ -1,4 +1,8 @@
 # fishmlservI
+### Deploy
+![image](https://github.com/user-attachments/assets/e7088464-d31b-4f26-8d3d-8577f7dd3d34)
+
+
 ### Run
 - dev  
 - http://localhost:8000/docs  
