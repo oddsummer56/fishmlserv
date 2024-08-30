@@ -1,12 +1,15 @@
 [project]
 name = "fishmlserv"
-version = "0.1.0"
+version = "0.4.0"
 description = "Default template for PDM package"
 authors = [
     {name = "oddsummer56", email = "oddsummer56@gmail.com"},
 ]
-dependencies = []
-requires-python = "==3.8.*"
+dependencies = [
+    "fastapi>=0.112.2",
+    "uvicorn[standard]>=0.30.6",
+]
+requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
 
