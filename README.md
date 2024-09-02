@@ -43,6 +43,13 @@ root@7244097edb66:/code# exit
 $ sudo docker logs -f <CONTAINER ID|NAMES>  
 ```
 
+### Fly.io
+```bash
+$ fly launch --no-deploy
+$ flyctl launch --name mariofish
+$ flyctl scale memory 256
+$ flyctl deploy
+```
 ### Ref
 - https://curlconverter.com/python
 
