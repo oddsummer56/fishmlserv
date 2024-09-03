@@ -16,15 +16,16 @@ def run_prediction(l:float, w:float):
     
     model_path = get_model_path()
 
-    with open("model_path", "rb") as f:
-    fish_model = pickle.load(f)
+    with open(model_path, "rb") as f:
+        fish_model = pickle.load(f)
 
-    fish_model.predict([[l, w]])
+    p = fish_model.predict([[l, w]])
 
-    if fish_model == [1]:
+    if p[0] == 1:
         fish = '도미'
     else:
         fish = '빙어'
-
+    
+    print(fish)
 
     return fish
