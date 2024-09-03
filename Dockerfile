@@ -1,16 +1,9 @@
-FROM python:3.11
-#FROM python:3.11.9-alpine3.20
+FROM datamario24/python311scikitlearn-fastapi:1.0.0
 
 WORKDIR /code
 
-#COPY . /code/
-COPY src/fishmlserv/main.py /code/
-#COPY requirements.txt /code/
+COPY src/fishmlserv/main.py /code/main.py
 
-#COPY ./requirements.txt /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade git+https://github.com/dMario24/fishmlserv.git@0.8/DHub
 
-#RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-RUN pip install --no-cache-dir --upgrade git+https://github.com/oddsummer56/fishmlserv.git@0.7/MANIFEST
-
-#CMD ["uvicorn", "src.fishmlserv.main:app", "--host", "0.0.0.0", "--port", "8765"]
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
