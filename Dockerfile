@@ -1,5 +1,6 @@
 #BASE 이미지 시작점
-FROM datamario24/isdomi:0.8.3
+#FROM datamario24/isdomi:0.8.3
+FROM oddsummer/fishmlserv:1.0.1
 
 WORKDIR /code
 
